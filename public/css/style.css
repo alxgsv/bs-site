@@ -62,7 +62,8 @@ h1, .tag, .phone { text-align: center; }
 .cols ul li { margin-bottom: 27px; }
 
 .like { padding-left: 82px; width: 46px; height: 30px; display: inline-block; background: url(../images/like.gif) top left no-repeat; text-align: center; font-size: 15px; color: white; font-weight: normal; }
-.like img {padding-top: 7px;}
+.like img { padding-top: 7px; }
+.like span { margin-top: 2px; display: inline-block; }
 
 .facebook_only { margin: 0 auto; width: 630px; text-align: center; font-size: 11px; }
 .facebook:hover .facebook_popover { display: block; }

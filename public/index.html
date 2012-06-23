@@ -59,7 +59,7 @@
   <script>
     $(function() {
       $.get("https://graph.facebook.com/367908179942131").complete(function(data){
-        $(".col .like").text($.parseJSON(data.responseText).likes || 42);
+        $(".col .like").html("<span>" + ($.parseJSON(data.responseText).likes || 42) + "</span>");
       });
     });
   </script>
