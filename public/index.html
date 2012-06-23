@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>BattleSweeper</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <!--
+    Hey, my name is Lyosha Gusev.
+    If you have something to say — alx.gsv@gmail.com
+  -->
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=197622676937667";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div class="page">
+    <div class="logo"></div>
+    <h1><img src="images/battle-sweeper.png" width="605" height="82" alt="Battle Sweeper"></h1>
+    <div class="tag">Battleship meets Minesweeper. You meet friends.</div>
+    <div class="cols">
+      <div class="col">
+        <p>Year 2012.<br>People have lots of&nbsp;friends and little time. BattleSweeper allows you to play with friends when you get a minute.</p>
+
+        <p>And if today you have to save the world — no problem, let’s play tomorrow.</p>
+      </div>
+      <div class="col phone">
+        <img src="images/phone.png" width="226" height="436" alt="Battle Sweeper">
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="#apple.com"><span>Available</span><br>
+<span>on the App Store</span></a></li>
+          <!--<li><a href="#google.com"><span>Available</span><br>
+<span>at Google Play</span></a></li>-->
+          <li><a href="#goose.com"><span>Play now</span></a></li>
+        </ul>
+        <div class="facebook">
+          <div class="like">
+            <img src="images/like-loader.gif">
+          </div>
+          <div class="facebook_popover">
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/BattleSweeper-Community/367908179942131" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="facebook_naci"><strong>Just one thing.</strong> We bought a lot of Facebook shares therefore you can only play the game if you have an account on Facebook. This is maybe not the best start for business, right? But I’m sure we’ll manage!</div>
+    <div class="footer">
+      &copy;&nbsp;2012 Samson The Goose <img src="images/samson.png" width="43" height="63" alt="Samson The Goose"> <a href="https://www.facebook.com/pages/BattleSweeper-Community/367908179942131" target="_blank"><span>Facebook</span></a> <a href="https://twitter.com/battlesweeper" target="_blank"><span>Twitter</span></a> <a href="mailto:attack@battlesweeper.com"><span>Email</span></a>
+    </div>
+  </div>
+  <script>
+    $(function() {
+      $.get("https://graph.facebook.com/367908179942131").complete(function(data){
+        $(".col .like").text($.parseJSON(data.responseText).likes || 42);
+      });
+    });
+  </script>
+</body>
+</html>
