@@ -31,10 +31,10 @@
         </ul>
         <div class="facebook">
           <a href="https://www.facebook.com/pages/BattleSweeper-Community/367908179942131" target="_blank" class="like">
-            <img src="images/like-loader.gif">
+            <img src="images/like-loader.gif" width="16" height="16">
           </a>
           <div class="facebook_popover">
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/BattleSweeper-Community/367908179942131" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/BattleSweeper-Community/367908179942131" data-width="292" data-show-faces="true" data-stream="false" data-header="false" data-border-color="#3f3e3f"></div>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
       });
       $.get("https://graph.facebook.com/367908179942131").complete(function(data){
         var parsed = $.parseJSON(data.responseText)
-        $(".col .like").html("<span>" + ((parsed && parsed.likes) || 42) + "</span>");
+        $(".like").html( (parsed && parsed.likes) || 42 );
       });
     });
   </script>
