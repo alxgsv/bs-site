@@ -72,9 +72,6 @@ h1, .tag, .phone { text-align: center; }
 .facebook:hover .facebook_popover { display: block; }
 
 .like { position: relative; margin-left: 32px; font-size: 15px; line-height: 30px; font-weight: normal; background: #3e3f3f; padding: 0 10px; color: white; display: inline-block; cursor: pointer; }
-.like span { border: none !important; padding: 0; }
-.like:hover span { padding: 0; background: none; }
-.like span:before { display: none; }
 .like img { vertical-align: middle; margin-top: -4px; margin-left: -4px; }
 .like:before { content: "Like"; display: inline-block; margin-right: 9px; padding-right: 10px; border-right: 2px solid #ffe88e; cursor: pointer; }
 .like:after { content: ""; position: absolute; width: 30px; height: 30px; background: #3e3f3f url(../images/fb.png) no-repeat; left: -32px; top: 0; cursor: pointer; }
@@ -111,6 +108,7 @@ h1, .tag, .phone { text-align: center; }
   transform-origin: 0% 0%;
   display: none;
   z-index: 4;
+  background: rgba(255,255,255,0.2);
 }
 
 
