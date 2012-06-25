@@ -27,56 +27,77 @@ table {
 img {
     border: 0;
 }
-html, body {
+html {
     height: 100%;
     width: 100%;
 }
 /* Common styles */
 body {
-    background: url(../images/bg.gif) top left repeat;
+    background: #ffe88e url(../images/bg.gif) repeat center top;
     min-width: 990px;
+    min-height: 100%;
     font: 15px/20px Helvetica, Arial, sans-serif;
     color: #3f3e3f;
 }
 
 a { color: #3f3e3f; text-decoration: none; }
-a span { padding: 0 3px; display: inline-block; background: url(../images/underline.png) bottom left repeat-x; }
+a span { padding: 0 3px; display: inline-block; border-bottom: 1px solid #b0a16b; position: relative; }
+a span:before { content: ""; position: absolute; border-bottom: 1px solid #7f7656; width: 100%; bottom: 0px; left: 0; }
 
 a:hover { text-decoration: none; color: white; }
-a:hover span { position: relative; left: 0; padding: 0 4px 0 3px; background-color: #3f3e3f; }
+a:hover span { position: relative; left: 0; padding: 0 4px 0 3px; background-color: #3f3e3f; border-color: #3f3e3f; }
+a:hover span:before { border-color: #3f3e3f; }
+
 
 .clear { clear: both; }
-.page { margin: 0 auto; width: 750px; }
+.page { margin: 0 auto; width: 750px; padding-top: 15px; }
 
-.logo { margin: 25px auto; width: 83px; height: 100px; background: url(../images/logo.png); }
+.logo { margin: 0 auto; width: 650px; height: 220px; background: url(../images/logo.png) no-repeat; }
+.svg .logo { background-image: url(../images/logo.svg); }
 
 h1, .tag, .phone { text-align: center; }
 
-.cols { margin: 27px 0px; padding-top: 30px; line-height: 28px; font-size: 24px; font-weight: bold; }
+.cols { margin: 27px 0px 0; padding-top: 30px; line-height: 28px; font-size: 24px; font-weight: bold; }
 .cols .col { width: 250px; float: left; }
 .cols p { margin: 0 0 27px 0; }
-.cols .phone { position: relative; top: -30px; left: 10px; margin-right: 20px; width: 230px; }
-.cols ul,
-.cols .like { margin-left: 40px; }
-
+.cols .phone { position: relative; top: -30px; left: 10px; margin-right: 20px; width: 230px; height: 450px; background: url(../images/iphone.png) no-repeat center top; }
+.cols .right { padding-left: 40px; width: 210px }
 .cols ul li { margin-bottom: 27px; }
 
-.like { padding-left: 82px; width: 46px; height: 30px; display: inline-block; background: url(../images/like.gif) top left no-repeat; text-align: center; font-size: 15px; color: white; font-weight: normal; }
-.like img { padding-top: 7px; }
-.like span { margin-top: 2px; display: inline-block; }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+  .cols .phone { background-image: url(../images/iphone@2x.png); background-size: 226px 436px; }
+}
 
-.facebook_only { margin: 0 auto; width: 630px; text-align: center; font-size: 11px; }
+.facebook { width: auto; display: inline-block; zoom: 1; position: relative; }
 .facebook:hover .facebook_popover { display: block; }
 
-.footer { margin: 30px 0; padding-bottom: 60px; text-align: center; font-size: 15px; font-weight: bold; }
+.like { position: relative; margin-left: 32px; font-size: 15px; line-height: 30px; font-weight: normal; background: #3e3f3f; padding: 0 10px; color: white; display: inline-block; cursor: pointer; }
+.like span { border: none !important; padding: 0; }
+.like:hover span { padding: 0; background: none; }
+.like span:before { display: none; }
+.like img { vertical-align: middle; margin-top: -4px; margin-left: -4px; }
+.like:before { content: "Like"; display: inline-block; margin-right: 9px; padding-right: 10px; border-right: 2px solid #ffe88e; cursor: pointer; }
+.like:after { content: ""; position: absolute; width: 30px; height: 30px; background: #3e3f3f url(../images/fb.png) no-repeat; left: -32px; top: 0; cursor: pointer; }
+.svg .like:after { background-image: url(../images/fb.svg); }
+
+.facebook_only { margin: 0 auto; width: 630px; text-align: center; font-size: 11px; line-height: 18px; }
+
+.footer { margin: 30px 0; padding-bottom: 80px; text-align: center; font-size: 15px; font-weight: bold; position: relative; }
 .footer a { margin-right: 20px;  }
-.footer a span { padding: 0; background: none; border-bottom: 1px solid #3f3e3f; }
+.footer a span { padding: 0; background: none; border-bottom: 1px solid #7f7656; }
+.footer a span:before { display: none; }
 .footer a:hover span { position: relative; margin-right: -3px; margin-left: -3px; padding: 0 3px; background: #3f3e3f; border: 0;  }
-.footer img { margin: 0 10px -30px 10px; }
+
+.footer .goose { position: absolute; left: 50%; top: 0; margin-left: -25px; width: 50px; height: 65px; background: url(../images/goose.png) no-repeat 0 0; }
+.svg .footer .goose { background-image: url(../images/goose.svg); }
+
+.footer .copyright,
+.footer .links { top: 20px; position: absolute; white-space: nowrap; }
+.footer .copyright { margin-right: 35px; right: 50%; }
+.footer .links { margin-left: 35px; left: 50%; }
 
 .facebook .facebook_popover {
   position: relative;
-  left: 40px;
   top: 10px;
   -webkit-animation: comeup 0.4s ease-out;
   -moz-animation: comeup 0.4s ease-out;

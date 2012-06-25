@@ -1,0 +1,6 @@
+<svg version="1.1" width="30px" height="30px" viewBox="0 0 30 30" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+  <rect x="2" y="24" fill="#ADADAE" width="26" height="4"/>
+  <path fill="#FFFFFF" d="M17.009,27.959v-8.991h-2.342v-2.929h2.342c0,0,0-1.431,0-2.848c0-2.141,1.383-4.106,4.571-4.106
+  	c1.291,0,2.245,0.124,2.245,0.124l-0.076,2.977c0,0-0.972-0.009-2.035-0.009c-1.15,0-1.333,0.529-1.333,1.409
+  	c0,0.694,0-1.356,0,2.453h3.309l-0.038,2.93h-3.287l0.016,8.991H17.009z"/>
+</svg>
